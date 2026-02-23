@@ -44,5 +44,5 @@ inputs:
     required: false
     default: false
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'docker://ghcr.io/step-security/push-to-gcr-github-action:v5.0.0@sha256:8ffe1f48d4cf40f6394a1d848cb1a9836c3bd86ad3be3e89481eda6df478ef51' #v5.0.0
