@@ -1,6 +1,6 @@
 # Push to GCR GitHub Action
 
-An action that builds docker image and pushes to Google Cloud Registry and [Google Artifact Registry](https://github.com/step-security/push-to-gcr-github-action/issues/35).
+An action that builds docker image and pushes to Google Cloud Registry and Google Artifact Registry.
 
 This action can be used to perform on every git `push` or every `tag` creation.
 
@@ -87,14 +87,4 @@ jobs:
           dockerfile: ./docker/Dockerfile.prod
           context: ./docker
 ```
-[A complete workflow example](https://github.com/step-security/push-to-gcr-github-action/tree/master/.github/workflows) with all type of authentication flavour
-
-[More Example](https://github.com/step-security/push-to-gcr-github-action/tree/master/examples)
-
-## Contribution
-- Fork
-- Implement your awesome idea or fix a bug
-- Create PR 🎉
-
-NB: The included workflow which tests the action's basic functionalities needs a GitHub secret named `JSON_GCLOUD_SERVICE_ACCOUNT_JSON`.
-Currently, the workflow is not testable for forked repositories but I have an action item to enable this.  
+[Example](https://github.com/step-security/push-to-gcr-github-action/tree/main/examples)
