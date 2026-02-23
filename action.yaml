@@ -1,0 +1,48 @@
+name: Push to GCR GitHub Action
+author: step-security
+description: An action that build docker image and push to Google Cloud Registry
+branding:
+  icon: feather
+  color: gray-dark
+inputs:
+  gcloud_service_key:
+    description: Google cloud service key json file as plain text or base64 encrypted. This field is optional if you are using this action with https://github.com/step-security/google-github-auth
+    required: false
+  registry:
+    description: The registry where the image should be pushed
+    required: false
+    default: 'gcr.io'
+  project_id:
+    description: The project id
+    required: true
+    default: my-awesome-project
+  image_name:
+    description: The image name
+    required: true
+    default: backend-server
+  image_tag:
+    description: Tag name
+    required: false
+    default: latest
+  dockerfile:
+    description: Dockerfile that will build the image
+    required: false
+    default: ""
+  context:
+    description: Docker build context
+    required: false
+    default: '.'
+  target:
+    description: Multi-staged build target
+    required: false
+    default: ""
+  build_args:
+    description: "Pass a list of env vars as build-args for docker-build, separated by commas"
+    required: false
+  push_only:
+    description: Skip the build step and just push an image
+    required: false
+    default: false
+runs:
+  using: docker
+  image: Dockerfile
