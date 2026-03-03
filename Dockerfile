@@ -1,4 +1,4 @@
-FROM docker:29.2.1-cli@sha256:1d6d751f1d68d1a5142c23c730ef5ecc976a8e050fa08c3cdb09f7e2e54a4439
+FROM docker:29.2.1-cli@sha256:cab69e2d0a1a2ea9a1ce1060252f439e83483ae41ec09317aecb33b08a0656a5
 
 LABEL maintainer="step-security"
 LABEL org.opencontainers.image.source=https://github.com/step-security/push-to-gcr-github-action
