@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.licenses=MIT
 
 RUN apk update && \
   apk upgrade && \
-  apk add --no-cache bash curl python3
+  apk add --no-cache bash curl python3 jq
 RUN ln -sf python3 /usr/bin/python
 
 RUN curl -sSL https://sdk.cloud.google.com > /tmp/gcl && bash /tmp/gcl --install-dir=/root/gcloud --disable-prompts && \
